@@ -1,0 +1,31 @@
+body {
+    scroll-behavior: smooth; /* This can also be handled by JS for wider compatibility */
+}
+
+/* Custom scrollbar - optional subtle enhancement */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F5F5; /* brand-bg */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00A8B5; /* kaist-cyan */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #007c86; /* darker cyan */
+}
+
+/* Ensure content below fixed navbar is not hidden */
+/* This might not be needed if sections have enough top padding or a different navbar strategy is used.
+   For now, sections use py-20 (padding top and bottom) which should provide enough space.
+   If a section is directly under the navbar, this would be useful.
+   body {
+      padding-top: 70px; /* Adjust based on actual navbar height 
+   }
+*/

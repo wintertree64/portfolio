@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정세준 | KAIST 컴퓨터과학과 포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kaist-deep-blue': '#004080',
+                        'kaist-cyan': '#00A8B5',
+                        'accent-light-blue': '#66B2FF',
+                        'brand-bg': '#F5F5F5',
+                        'brand-text': '#333333',
+                        'brand-surface': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg font-sans text-brand-text antialiased">
+
+    <!-- Header / Navigation -->
+    <header id="navbar" class="bg-brand-surface/80 backdrop-blur-md shadow-md sticky top-0 z-50 w-full transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-kaist-deep-blue">정세준</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-brand-text hover:text-kaist-cyan transition-colors">홈</a>
+                <a href="#about" class="text-brand-text hover:text-kaist-cyan transition-colors">소개</a>
+                <a href="#projects" class="text-brand-text hover:text-kaist-cyan transition-colors">프로젝트</a>
+                <a href="#experience" class="text-brand-text hover:text-kaist-cyan transition-colors">경력</a>
+                <a href="#research" class="text-brand-text hover:text-kaist-cyan transition-colors">연구</a>
+                <a href="#skills" class="text-brand-text hover:text-kaist-cyan transition-colors">기술</a>
+                <a href="#awards" class="text-brand-text hover:text-kaist-cyan transition-colors">수상 및 활동</a>
+                <a href="#contact" class="text-brand-text hover:text-kaist-cyan transition-colors">연락처</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-brand-text">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-surface shadow-lg border-t border-gray-200">
+            <a href="#home" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">홈</a>
+            <a href="#about" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">소개</a>
+            <a href="#projects" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">프로젝트</a>
+            <a href="#experience" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">경력</a>
+            <a href="#research" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">연구</a>
+            <a href="#skills" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">기술</a>
+            <a href="#awards" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">수상 및 활동</a>
+            <a href="#contact" class="block px-6 py-3 text-brand-text hover:bg-kaist-cyan/10 transition-colors">연락처</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center bg-brand-surface">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <img src="https://r2.flowith.net/files/o/1748777419154-professional_confident_young_korean_male_cs_student_portrait_index_0@1024x1024.png" alt="정세준 프로필 사진" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 object-cover shadow-xl border-4 border-white">
+                <h1 class="text-4xl md:text-5xl font-bold text-kaist-deep-blue mb-4">정세준 / Sejun Jung</h1>
+                <p class="text-xl md:text-2xl text-kaist-cyan font-medium mb-8">KAIST 컴퓨터과학과 학부생 | 혁신적인 소프트웨어 개발자 & 문제 해결사</p>
+                <p class="max-w-3xl mx-auto text-lg text-brand-text mb-10 leading-relaxed">
+                    KAIST 컴퓨터과학과에 재학하며 소프트웨어 개발, 연구, 창업 등 다양한 분야에서 경험을 쌓고 있는 정세준입니다. 문제 정의부터 해결, 그리고 실제 가치 창출까지 이어지는 과정을 즐기며, 특히 모바일/백엔드 개발 및 자동화 분야에 강점을 가지고 있습니다. 저의 학업 성취, 프로젝트 경험, 그리고 다양한 도전을 이 웹사이트에서 만나보세요.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#projects" class="w-full sm:w-auto inline-block bg-kaist-cyan text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-opacity-80 transition-colors">프로젝트 살펴보기</a>
+                    <a href="#contact" class="w-full sm:w-auto inline-block bg-transparent border-2 border-kaist-cyan text-kaist-cyan px-8 py-3 rounded-md text-lg font-medium hover:bg-kaist-cyan hover:text-white transition-colors">연락하기</a>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <i data-lucide="graduation-cap" class="w-10 h-10 text-kaist-cyan mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-2">높은 GPA</h3>
+                        <p class="text-sm text-brand-text">KAIST 컴퓨터과학과 3.80/4.30</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <i data-lucide="award" class="w-10 h-10 text-kaist-cyan mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-2">주요 수상</h3>
+                        <p class="text-sm text-brand-text">GESS Pitch 1위, Air Force Startup 4위</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <i data-lucide="briefcase" class="w-10 h-10 text-kaist-cyan mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-2">인턴 경험</h3>
+                        <p class="text-sm text-brand-text">주식회사 teambl 개발 인턴</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue text-center mb-2">소개 (About Me)</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-12"></div>
+                <div class="bg-brand-surface p-8 md:p-12 rounded-lg shadow-xl max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-semibold text-kaist-deep-blue mb-6">정세준입니다.</h3>
+                    <p class="text-lg text-brand-text mb-6 leading-relaxed">
+                        저는 KAIST 컴퓨터과학과에서 학문적 깊이를 더하고 있는 학생으로, 소프트웨어 개발을 통해 세상을 긍정적으로 변화시키는 데 열정을 가지고 있습니다. 복잡한 문제를 분석하고 창의적인 해결책을 제시하는 과정에서 큰 보람을 느낍니다. 저의 목표는 기술적 전문성과 실질적인 경험을 바탕으로 사회에 기여하는 혁신가가 되는 것입니다. KAIST에서의 학업은 저에게 강력한 이론적 기반과 다양한 프로젝트를 통한 실전 경험을 제공했으며, 이는 제 역량 강화의 핵심 동력이 되었습니다.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-kaist-deep-blue mb-3">학력</h4>
+                        <p class="text-brand-text"><strong>KAIST, 컴퓨터과학과 학사</strong> (2020.03 - 현재), 대전, 대한민국</p>
+                        <p class="text-brand-text"><strong>GPA:</strong> 3.80 / 4.30</p>
+                        <p class="text-brand-text mt-2"><strong>주요 수강 과목:</strong> 자료구조, 알고리즘, 운영체제, 데이터베이스, 컴퓨터 네트워크, 소프트웨어 공학, 인공지능 개론, 기계학습 등</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-kaist-deep-blue mb-4">핵심 역량</h4>
+                        <ul class="list-disc list-inside space-y-3 text-brand-text text-md leading-relaxed">
+                            <li><strong>뛰어난 학업 역량:</strong> KAIST 컴퓨터과학과 GPA 3.80/4.30으로 입증된 CS 전반에 대한 깊이 있는 이해와 성실성. 다수의 전공 프로젝트에서 A+ 성적 취득.</li>
+                            <li><strong>연구 및 탐구 능력:</strong> KAIST CSTL lab 인턴 및 CREST centre 방문 연구원 경험을 통해 머신러닝 공정성, 소프트웨어 테스팅 등 고급 연구 주제 탐구 및 실험 수행 능력 배양.</li>
+                            <li><strong>소프트웨어 개발:</strong> C, Python, JavaScript를 능숙하게 사용하며, React Native, Node.js 기반의 다수 풀스택 프로젝트(모바일 앱, 웹 서비스) 개발 경험. 실제 사용자 문제를 해결하는 애플리케이션 개발에 능숙.</li>
+                            <li><strong>프로젝트 관리:</strong> Agile(Scrum/Kanban) 방법론을 적용한 다수의 팀 프로젝트에서 PM 또는 핵심 개발자 역할 수행. Figma를 활용한 UX/UI 설계부터 개발, 배포까지 전 과정 경험.</li>
+                            <li><strong>언어 능력:</strong> 한국어(원어민) 및 영어(유창, TOEIC 950+) 능력을 바탕으로 글로벌 환경에서의 원활한 소통 및 기술 문서 이해/작성 가능.</li>
+                            <li><strong>기업가 정신 및 문제 해결:</strong> GESS Pitch Competition 1위, Air Force Startup Competition 4위 등 다수 창업 경진대회 수상 통해 혁신적 아이디어 발상 및 사업화 역량 입증. 사용자 문제 정의 및 솔루션 도출에 강점.</li>
+                            <li><strong>리더십 및 사회 기여:</strong> Silver Lining 국제봉사동아리 재무팀장, K-LET 강연 봉사 등 다양한 비교과 활동 참여. 팀워크와 소통을 중시하며, 사회 문제 해결에 대한 관심과 실천 의지 보유.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue text-center mb-2">프로젝트 (Projects)</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-brand-surface rounded-lg shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <img src="https://r2.flowith.net/files/o/1748777433109-Data_Automation_and_Excel_VBA_Project_Visualization_index_3@1024x1024.png" alt="Excel VBA 업무 자동화 프로젝트 시각화" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-kaist-deep-blue mb-3">Excel VBA 업무 자동화 툴</h3>
+                            <p class="text-xs text-gray-500 mb-2">기간: 약 3개월</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>목표:</strong> 사내 반복적인 데이터 입력, 보고서 생성 및 이메일 발송 작업 자동화를 통한 업무 효율성 극대화.</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>상세 설명:</strong> 기획부터 개발, 배포까지 전 과정을 담당. VBA 매크로 및 사용자 친화적 인터페이스를 개발하여 수동 작업 최소화 및 오류 감소.</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>주요 기능:</strong> 데이터 유효성 검사, 자동 보고서 생성(PDF/Excel 형식), 지정 수신자 대상 자동 이메일 발송, 관리자용 설정 패널.</p>
+                            <p class="text-sm text-kaist-cyan font-medium mb-1 mt-3">주요 기술:</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Excel VBA</span>
+                            </div>
+                            <p class="text-sm text-brand-text mb-1"><strong>역할:</strong> 전체 기획 및 개발 총괄</p>
+                            <p class="text-sm text-brand-text"><strong>성과:</strong> 관련 업무 처리 시간 평균 70% 단축, 수동 작업으로 인한 오류 발생률 95% 감소.</p>
+                        </div>
+                         <div class="p-6 bg-gray-50 mt-auto">
+                            <a href="#" class="text-kaist-cyan hover:underline font-medium text-sm">더 알아보기 (준비중)</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-brand-surface rounded-lg shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <img src="https://r2.flowith.net/files/o/1748777430683-Mobile_App_Development_Project_Visualization_index_1@1024x1024.png" alt="모바일 앱 개발 프로젝트 시각화" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-kaist-deep-blue mb-3">React Native/Node.js 기반 모바일 앱</h3>
+                            <p class="text-xs text-gray-500 mb-2">기간: 2022년 - 현재 (다수 프로젝트)</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>목표:</strong> 생산성, 피트니스, 이민 지원, 금융 관리 등 다양한 사용자 니즈를 충족하는 모바일 애플리케이션 프로토타입 개발 및 백엔드 시스템 구축.</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>상세 설명:</strong> 사용자 중심 설계와 Agile 방법론을 적용하여 아이디어 구체화, 신속한 프로토타이핑, 사용자 테스트 및 반복 개선. 풀스택 개발 및 PM 역할 수행.</p>
+                             <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>주요 기능 (예시):</strong> 작업/시간 관리(생산성), 운동 기록/목표 설정(피트니스), 서류/절차 안내(이민 지원), 소비 분석/예산 관리(금융).</p>
+                            <p class="text-sm text-kaist-cyan font-medium mb-1 mt-3">주요 기술:</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">React Native</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Node.js</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">JavaScript</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Expo</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Firebase</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">MongoDB</span>
+                            </div>
+                            <p class="text-sm text-brand-text mb-1"><strong>역할:</strong> 풀스택 개발, UX/UI 설계 참여, PM</p>
+                            <p class="text-sm text-brand-text"><strong>성과:</strong> 다수 프로토타입 성공적 개발 및 사용자 테스트 완료. MVP 모델 백엔드 아키텍처 설계/구축 경험. Agile 환경에서의 빠른 개발 및 배포 사이클 경험.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                           <a href="#" class="text-kaist-cyan hover:underline font-medium text-sm">더 알아보기 (준비중)</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-brand-surface rounded-lg shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <img src="https://r2.flowith.net/files/o/1748777420839-Creative_Professional_UXUI_Design_Project_Image_index_2@1024x1024.png" alt="UX/UI 디자인 프로젝트 시각화" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-kaist-deep-blue mb-3">Figma 활용 UX/UI 디자인</h3>
+                            <p class="text-xs text-gray-500 mb-2">기간: 2022년 - 현재 (개발 프로젝트 연계)</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>목표:</strong> 개발 프로젝트와 연계하여 사용자 중심의 직관적이고 매력적인 모바일/웹 인터페이스 설계.</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>상세 설명:</strong> 사용자 리서치, 페르소나 및 유저 저니맵 작성을 통해 사용자 니즈 파악. 정보구조 설계, 와이어프레임 및 인터랙티브 프로토타입 제작으로 사용성 검증. 개발팀과의 긴밀한 소통으로 디자인 의도 정확히 반영.</p>
+                            <p class="text-brand-text text-sm mb-2 leading-relaxed"><strong>주요 작업:</strong> 와이어프레이밍, 프로토타이핑, UI 디자인, 디자인 시스템 기초 구축, 개발 가이드라인 작성.</p>
+                            <p class="text-sm text-kaist-cyan font-medium mb-1 mt-3">주요 기술:</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Figma</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">UX/UI Design</span>
+                                <span class="bg-kaist-cyan/20 text-kaist-cyan px-2 py-1 text-xs rounded-full">Prototyping</span>
+                            </div>
+                            <p class="text-sm text-brand-text mb-1"><strong>역할:</strong> UX/UI 디자이너</p>
+                            <p class="text-sm text-brand-text"><strong>성과:</strong> 개발 애플리케이션의 사용자 만족도 및 사용성 향상에 기여. 다수 프로젝트에서 디자인 컨셉부터 최종 UI까지 완성도 높게 구현. 개발 지식을 바탕으로 실현 가능한 디자인 제안. (디자인 포트폴리오 별도 제공 가능)</p>
+                        </div>
+                         <div class="p-6 bg-gray-50 mt-auto">
+                            <a href="#" class="text-kaist-cyan hover:underline font-medium text-sm">더 알아보기 (준비중)</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue text-center mb-2">경력 (Experience)</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-12"></div>
+                <div class="space-y-8 max-w-3xl mx-auto">
+                    <div class="bg-brand-surface p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-semibold text-kaist-deep-blue">주식회사 teambl</h3>
+                        <p class="text-kaist-cyan font-medium mb-1">소프트웨어 개발 인턴 | 2024년 1월 - 2024년 2월 (2개월)</p>
+                        <p class="text-brand-text text-md mt-3 mb-2 leading-relaxed">AI 기반 팀 협업 솔루션 개발 스타트업 'teambl'에서 인턴으로 근무하며 실무 개발 프로세스를 경험했습니다.</p>
+                        <p class="text-brand-text text-md mb-1"><strong>주요 업무 및 책임:</strong></p>
+                        <ul class="list-disc list-inside text-brand-text text-md space-y-1 mb-3 leading-relaxed">
+                            <li>웹 애플리케이션 프론트엔드 및 백엔드 기능 개발 지원</li>
+                            <li>API 테스트 및 기술 문서화 작업 참여</li>
+                            <li>사용자 피드백 기반 기존 기능 개선 및 버그 수정</li>
+                        </ul>
+                        <p class="text-brand-text text-md mb-1"><strong>참여 프로젝트:</strong></p>
+                        <ul class="list-disc list-inside text-brand-text text-md space-y-1 mb-3 leading-relaxed">
+                            <li>팀 협업 플랫폼 'TeamIn'의 신규 기능 프로토타이핑 및 일부 모듈 개발</li>
+                            <li>AI 추천 기능 관련 데이터 전처리 작업 보조</li>
+                        </ul>
+                        <p class="text-brand-text text-md mb-1"><strong>사용 기술:</strong></p>
+                        <div class="flex flex-wrap gap-2 my-2">
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">React</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Node.js</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Python</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Git</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Jira</span>
+                        </div>
+                        <p class="text-brand-text text-md mb-1"><strong>주요 성과:</strong></p>
+                        <ul class="list-disc list-inside text-brand-text text-md space-y-1 mb-3 leading-relaxed">
+                            <li>신규 기능 프로토타입 개발 완료로 팀의 아이디어 검증 시간 단축에 기여</li>
+                            <li>API 테스트 자동화 스크립트 개발로 테스트 효율 15% 향상</li>
+                            <li>버그 수정 및 코드 리팩토링 통해 시스템 안정성 증진</li>
+                        </ul>
+                        <p class="text-brand-text text-md mb-1"><strong>배운 점:</strong></p>
+                        <p class="text-brand-text text-md leading-relaxed">스타트업 환경에서의 빠른 개발 사이클과 애자일 방식의 협업 프로세스를 깊이 있게 경험했습니다. 실무 환경에서의 코드 작성 능력과 복잡한 문제에 대한 해결 능력이 향상되었으며, 사용자 중심의 서비스 개발 마인드셋을 함양하는 계기가 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Research Section -->
+        <section id="research" class="py-20 bg-brand-surface">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue text-center mb-2">연구 경험 (Research)</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-12"></div>
+                <div class="space-y-10 max-w-3xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-semibold text-kaist-deep-blue">KAIST CSTL lab (Computing System & Trustworthy Language Lab)</h3>
+                        <p class="text-kaist-cyan font-medium mb-1">학부 연구생 | 2023년 7월 - 2023년 8월 (2개월)</p>
+                        <p class="text-brand-text text-md mt-3 mb-2 leading-relaxed"><strong>연구 주제:</strong> 머신러닝 모델의 공정성(Fairness) 분석 및 완화 기법 연구</p>
+                        <p class="text-brand-text text-md mb-1"><strong>역할 및 기여:</strong></p>
+                        <ul class="list-disc list-inside text-brand-text text-md space-y-1 mb-3 leading-relaxed">
+                            <li>Fairness 관련 최신 문헌 연구 및 주요 지표 분석</li>
+                            <li>공개 데이터셋 전처리 및 특성 분석 수행</li>
+                            <li>Python 기반 공정성 측정 알고리즘 구현 및 실험 보조</li>
+                            <li>실험 결과 시각화 및 연구 보고서 일부 작성 참여</li>
+                        </ul>
+                        <p class="text-brand-text text-md mb-1"><strong>사용 기술:</strong></p>
+                         <div class="flex flex-wrap gap-2 my-2">
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Python</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Pandas</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Scikit-learn</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Matplotlib</span>
+                        </div>
+                        <p class="text-brand-text text-md mb-1"><strong>성과:</strong></p>
+                        <p class="text-brand-text text-md leading-relaxed">머신러닝 모델의 공정성 분야에 대한 깊이 있는 이해를 증진시키고, 실제 연구 프로젝트 참여를 통해 연구 방법론 및 학문적 글쓰기 기초를 습득했습니다. 연구실 프로젝트에 기여하고 중간 결과 보고서를 성공적으로 작성했습니다.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-semibold text-kaist-deep-blue">KAIST CREST centre (Center for Reliable Autonomous Systems Technology)</h3>
+                        <p class="text-kaist-cyan font-medium mb-1">방문 연구원 | 2023년 3월 - 2023년 6월 (4개월)</p>
+                        <p class="text-brand-text text-md mt-3 mb-2 leading-relaxed"><strong>연구 주제:</strong> 대규모 소프트웨어 시스템의 자동화된 테스트 케이스 생성 및 최적화 연구</p>
+                        <p class="text-brand-text text-md mb-1"><strong>역할 및 기여:</strong></p>
+                        <ul class="list-disc list-inside text-brand-text text-md space-y-1 mb-3 leading-relaxed">
+                            <li>소프트웨어 테스팅 자동화 관련 주요 논문 분석 및 요약</li>
+                            <li>테스트 자동화 도구(예: Selenium, JUnit) 사용법 학습 및 적용</li>
+                            <li>연구실 내 소규모 모듈에 대한 테스트 스크립트 작성 및 실행, 결과 분석</li>
+                            <li>주간 연구 미팅 참여, 아이디어 공유 및 토론</li>
+                        </ul>
+                         <p class="text-brand-text text-md mb-1"><strong>사용 기술:</strong></p>
+                         <div class="flex flex-wrap gap-2 my-2">
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Java</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">JUnit</span>
+                            <span class="bg-kaist-cyan/20 text-kaist-cyan px-3 py-1 text-sm rounded-full">Selenium (기초)</span>
+                        </div>
+                        <p class="text-brand-text text-md mb-1"><strong>성과:</strong></p>
+                        <p class="text-brand-text text-md leading-relaxed">소프트웨어 테스팅 및 검증 분야의 전문 지식을 확장했습니다. 연구 프로젝트 초기 단계에 참여하며 문헌 연구부터 실험 설계의 기초까지 경험하고, 연구 보고서 작성에 일부 기여했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-brand-bg">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-12 lg:mb-16">
+                    <div class="lg:w-2/5 mb-8 lg:mb-0">
+                        <img src="https://r2.flowith.net/files/o/1748777432547-Abstract_Futuristic_Visualization_of_Jang_Sejun_Versatile_Technical_Skills_index_4@1024x1024.png" alt="기술적 역량 시각화" class="rounded-lg shadow-xl object-cover w-full h-auto max-h-[300px] md:max-h-[400px] lg:max-h-full">
+                    </div>
+                    <div class="lg:w-3/5 text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-kaist-deep-blue mb-2">기술 스택 (Skills)</h2>
+                        <div class="w-20 h-1 bg-kaist-cyan mx-auto lg:mx-0 mb-6"></div>
+                        <p class="text-lg text-brand-text leading-relaxed">
+                            다양한 프로그래밍 언어, 프레임워크, 도구에 대한 깊이 있는 이해와 실무 경험을 바탕으로 견고하고 효율적인 솔루션을 구축합니다. 
+                            저의 핵심 기술들은 다음과 같습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="bg-brand-surface p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-4">프로그래밍 언어</h3>
+                        <ul class="space-y-3 text-md text-brand-text">
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>C (능숙)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Python (능숙)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>JavaScript (능숙)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Java (기본)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-4">프레임워크 & 라이브러리</h3>
+                        <ul class="space-y-3 text-md text-brand-text">
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>React Native (다수 프로젝트 경험)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Node.js (다수 프로젝트 경험)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Expo</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>React</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Pandas, Scikit-learn</li>
+                        </ul>
+                    </div>
+                     <div class="bg-brand-surface p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-4">데이터베이스</h3>
+                        <ul class="space-y-3 text-md text-brand-text">
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>MongoDB (프로젝트 사용 경험)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Firebase (프로젝트 사용 경험)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>SQL (기본)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-4">도구</h3>
+                        <ul class="space-y-3 text-md text-brand-text">
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Figma (UX/UI 디자인 및 프로토타이핑)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Git & GitHub</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Docker (기본 사용)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>VS Code</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Excel VBA</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-surface p-6 rounded-lg shadow-lg md:col-span-2">
+                        <h3 class="text-xl font-semibold text-kaist-deep-blue mb-4">개발 방법론</h3>
+                        <ul class="space-y-3 text-md text-brand-text">
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Agile (Scrum/Kanban 기반 프로젝트 경험)</li>
+                            <li class="flex items-center"><i data-lucide="chevron-right" class="w-5 h-5 text-kaist-cyan mr-2 flex-shrink-0"></i>Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Activities Section -->
+        <section id="awards" class="py-20 bg-brand-surface">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue text-center mb-2">수상 내역 및 기타 활동</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-kaist-deep-blue mb-6">수상 내역</h3>
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h4 class="text-lg font-semibold text-kaist-cyan">GESS Pitch Competition @Silicon Valley 1st Prize</h4>
+                                <p class="text-sm text-brand-text">2024년 7월</p>
+                                <p class="text-sm text-brand-text mt-1 leading-relaxed">혁신적인 아이디어와 사업 계획을 발표하여 실리콘밸리 현지 심사위원단으로부터 최고상 수상. 기업가 정신과 글로벌 경쟁력 입증.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h4 class="text-lg font-semibold text-kaist-cyan">Air Force Startup Competition 4th Prize</h4>
+                                <p class="text-sm text-brand-text">2022년 9월</p>
+                                 <p class="text-sm text-brand-text mt-1 leading-relaxed">공군 주최 스타트업 경진대회에서 기술 기반 솔루션으로 4위 입상. 문제 해결 능력과 기술 개발 역량 인정.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-kaist-deep-blue mb-6">주요 활동</h3>
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h4 class="text-lg font-semibold text-kaist-cyan">봉사 활동</h4>
+                                <ul class="list-disc list-inside text-sm text-brand-text mt-2 space-y-1 leading-relaxed">
+                                    <li>Silver Lining (국제봉사동아리) 재무팀장 (2024.03 - 현재): 동아리 재정 관리 및 운영 기여</li>
+                                    <li>World Vision 편지번역봉사단 비전메이커 (2024.01 - 현재): 후원 아동 편지 번역을 통한 소통 지원</li>
+                                    <li>K-LET (KAIST 청소년 강연 동아리) 회원 (2023.03 - 2024.02): 청소년 대상 과학/진로 강연 활동</li>
+                                    <li>여행하는 선생님들 (전국 교육봉사 동아리) 회원 (2023.07 - 2024.02): 교육 소외지역 학생 대상 멘토링 및 교육 봉사</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h4 class="text-lg font-semibold text-kaist-cyan">기타</h4>
+                                <ul class="list-disc list-inside text-sm text-brand-text mt-2 space-y-1 leading-relaxed">
+                                    <li><strong>언어 능력:</strong> 한국어 (원어민), 영어 (유창, TOEIC 950+)</li>
+                                    <li><strong>도전 정신:</strong> Full Marathon Finisher (JTBC 풀코스 마라톤, 2024년 11월 완주)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-kaist-deep-blue mb-2">연락처 (Contact)</h2>
+                <div class="w-20 h-1 bg-kaist-cyan mx-auto mb-10"></div>
+                <p class="text-lg text-brand-text mb-10 max-w-xl mx-auto leading-relaxed">
+                    저의 경험과 기술에 대해 더 궁금한 점이 있으시거나, 협업 기회를 논의하고 싶으시다면 언제든지 아래 연락처로 문의해 주십시오.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-10">
+                    <a href="mailto:sejunisbest@kaist.ac.kr" class="flex items-center text-lg text-brand-text hover:text-kaist-cyan transition-colors group">
+                        <i data-lucide="mail" class="w-6 h-6 mr-3 text-kaist-cyan/80 group-hover:text-kaist-cyan transition-colors"></i>
+                        sejunisbest@kaist.ac.kr
+                    </a>
+                    <a href="https://linkedin.com/in/sejun-jung" target="_blank" rel="noopener noreferrer" class="flex items-center text-lg text-brand-text hover:text-kaist-cyan transition-colors group">
+                        <i data-lucide="linkedin" class="w-6 h-6 mr-3 text-kaist-cyan/80 group-hover:text-kaist-cyan transition-colors"></i>
+                        LinkedIn 프로필
+                    </a>
+                    <a href="https://github.com/sejunisbest" target="_blank" rel="noopener noreferrer" class="flex items-center text-lg text-brand-text hover:text-kaist-cyan transition-colors group">
+                        <i data-lucide="github" class="w-6 h-6 mr-3 text-kaist-cyan/80 group-hover:text-kaist-cyan transition-colors"></i>
+                        GitHub 프로필
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-kaist-deep-blue text-center py-8">
+        <p class="text-white/80 text-sm">&copy; <span id="currentYear"></span> Sejun Jung. All rights reserved.</p>
+        <p class="text-white/60 text-xs mt-1">Designed with inspiration from Jony Ive's philosophy and KAIST's spirit of innovation.</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
